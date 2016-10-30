@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:outputText value="Frame 4" />
+	<h:outputText value="${mainFrameBean.menuValue}" />
+	<br />
+	<h:outputText value="${frame4View.message}" />
+	
+	<p:dataGrid var="car" value="#{dataGridView.cars}" columns="3" layout="grid"
+        rows="12" paginator="true" id="cars" rowStatePreserved="true"
+        paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+        rowsPerPageTemplate="6,12,16">
+ 
+        <f:facet name="header">
+            Cars for Sale
+        </f:facet>
+ 
+        <p:panel header="#{car.id}" style="text-align:center">
+        	<h:outputText value="#{car.year}" />
+        </p:panel>
+ 
+    </p:dataGrid>
+		
+</html>
