@@ -11,6 +11,7 @@ import javax.inject.Named;
 public class Frame1View implements Serializable {
 	
 	private String message = "frame 1";
+	private String test = "test";
 	
 	@PostConstruct
 	public void init() {
