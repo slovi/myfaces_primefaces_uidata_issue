@@ -9,18 +9,16 @@
 	</h:head>
 	
 	<h:body>
-	
-		<p>
-			<h:outputLink value="#{request.contextPath}/index.xhtml">Back</h:outputLink>
-			<p:dialog closable="false">Test</p:dialog>
-		</p>
+
+		<h:outputText value="Test dialog 1" />
 		
 		<h:form>
+			
+			<p:commandLink value="Close dialog 1" actionListener="#{dialogBean.closeDialog1}" />
 		
-			<p:commandLink value="Show dialog 1" actionListener="#{dialogBean.showDialog1}" />
+			<p:commandLink value="Show dialog 2" actionListener="#{dialogBean.showDialog2}" />
 		
 		</h:form>
-		
-	</h:body>
 	
+	</h:body>
 </html>
