@@ -21,21 +21,19 @@
 		<p:poll process="@this" update="selectedCarForm" interval="15" />
 	</h:form>
 	
-	<ui:remove>
-		<p:dataGrid var="car" value="#{dataGridView.cars}" columns="3" layout="grid"
-	        rows="12" paginator="true" id="cars" rowStatePreserved="true"
-	        paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
-	        rowsPerPageTemplate="6,12,16">
-	 
-	        <f:facet name="header">
-	            Cars for Sale
-	        </f:facet>
-	 
-	        <p:panel header="#{car.id}" style="text-align:center">
-	        	<h:outputText value="#{car.year}" />
-	        </p:panel>
-	 
-	    </p:dataGrid>
-    </ui:remove>
+	<p:dataGrid var="car" value="#{dataGridView.cars}" columns="3" layout="grid"
+        rows="12" paginator="true" id="cars" rowStatePreserved="true"
+        paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+        rowsPerPageTemplate="6,12,16">
+ 
+        <f:facet name="header">
+            Cars for Sale
+        </f:facet>
+ 
+        <p:panel header="#{car.id}" style="text-align:center">
+        	<h:outputText value="#{car.year}" />
+        </p:panel>
+ 
+    </p:dataGrid>
 		
 </html>

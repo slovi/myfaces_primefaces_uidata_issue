@@ -10,35 +10,13 @@
 	
 	<h:body>
 		
-		<p:commandLink action="test" value="test" />
-		
-		<h:form>
-			<h:panelGrid columns="1" bodyrows="3">
-				<h:commandLink>
-					<h:outputText value="Frame 1" />
-					<f:setPropertyActionListener value="iframe1.xhtml" target="#{mainFrameBean.menuValue}" />
-					<f:ajax render=":mainframe" execute="@this" />
-				</h:commandLink>
-				<h:commandLink>
-					<h:outputText value="Frame 2" />
-					<f:setPropertyActionListener value="iframe2.xhtml" target="#{mainFrameBean.menuValue}" />
-					<f:ajax render=":mainframe" execute="@this" />
-				</h:commandLink>
-				<h:commandLink>
-					<h:outputText value="Frame 3" />
-					<f:setPropertyActionListener value="iframe3.xhtml" target="#{mainFrameBean.menuValue}" />
-					<f:ajax render=":mainframe" execute="@this" />
-				</h:commandLink>
-				<h:commandLink>
-					<h:outputText value="Frame 4" />
-					<f:setPropertyActionListener value="iframe4.xhtml" target="#{mainFrameBean.menuValue}" />
-					<f:ajax render=":mainframe" execute="@this" />
-				</h:commandLink>
-			</h:panelGrid>
-		</h:form>
-		
-		<h:panelGrid id="mainframe">
-			<ui:include src="/frames/#{mainFrameBean.menuValue}" />
+		<h:panelGrid columns="1">
+			<h:outputLink value="#{request.contextPath}/bug1/index.xhtml">
+				<h:outputText value="bug1" />
+			</h:outputLink>
+			<h:outputLink value="#{request.contextPath}/bug2/index.xhtml">
+				<h:outputText value="bug2" />
+			</h:outputLink>
 		</h:panelGrid>
 		
 	</h:body>

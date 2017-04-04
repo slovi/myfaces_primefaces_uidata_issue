@@ -1,4 +1,4 @@
-package cz.jsf.test;
+package cz.primefacesbugs.bug1;
 
 import java.io.Serializable;
 import java.util.HashSet;

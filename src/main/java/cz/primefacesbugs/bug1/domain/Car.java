@@ -1,4 +1,4 @@
-package cz.jsf.test.domain;
+package cz.primefacesbugs.bug1.domain;
 
 public class Car {
 	

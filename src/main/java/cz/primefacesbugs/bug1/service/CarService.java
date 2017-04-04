@@ -1,8 +1,8 @@
-package cz.jsf.test.service;
+package cz.primefacesbugs.bug1.service;
 
 import java.util.List;
 
-import cz.jsf.test.domain.Car;
+import cz.primefacesbugs.bug1.domain.Car;
 
 public interface CarService {
 	
