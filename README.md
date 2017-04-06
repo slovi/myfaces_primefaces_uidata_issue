@@ -4,6 +4,6 @@ Test application for replicate primefaces issues.
 
 To run application:
 
-`mvn clean compile`
+`mvn clean package`
 
-`mvn tomcat7:run`
+Deploy war to your favourite server container/application server.
