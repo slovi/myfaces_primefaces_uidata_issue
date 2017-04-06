@@ -9,5 +9,5 @@ To run application:
 Deploy war to your favourite server container/application server.
 
 Issue list:
-https://github.com/primefaces/primefaces/issues/1654
-https://github.com/primefaces/primefaces/issues/2248
+* https://github.com/primefaces/primefaces/issues/1654
+* https://github.com/primefaces/primefaces/issues/2248
