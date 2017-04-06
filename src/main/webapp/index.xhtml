@@ -10,12 +10,18 @@
 	
 	<h:body>
 		
-		<h:panelGrid columns="1">
+		<h:panelGrid columns="2">
 			<h:outputLink value="#{request.contextPath}/bug1/index.xhtml">
 				<h:outputText value="bug1 (Dynamic ui:include + UIData with rowstatepreserved)" />
 			</h:outputLink>
+			<h:outputLink value="https://github.com/primefaces/primefaces/issues/1654" target="_blank">
+				<h:outputText value="external link" />
+			</h:outputLink>			
 			<h:outputLink value="#{request.contextPath}/bug2/index.xhtml">
-				<h:outputText value="bug2" />
+				<h:outputText value="bug2 (Inner dialog with dialog status does not work correctly in Firefox 52.0)" />
+			</h:outputLink>
+			<h:outputLink value="https://github.com/primefaces/primefaces/issues/2248" target="_blank">
+				<h:outputText value="external link" />
 			</h:outputLink>
 		</h:panelGrid>
 		

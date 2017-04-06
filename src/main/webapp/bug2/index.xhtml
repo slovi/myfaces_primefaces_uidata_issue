@@ -4,23 +4,14 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
-	<h:head>
-	
-	</h:head>
+	<h:head></h:head>
 	
 	<h:body>
-	
-		<p>
-			<h:outputLink value="#{request.contextPath}/index.xhtml">Back</h:outputLink>
-			<p:dialog closable="false">Test</p:dialog>
-		</p>
-		
+		<p><h:outputLink value="#{request.contextPath}/index.xhtml">Back</h:outputLink></p>
 		<h:form>
-		
 			<p:commandLink value="Show dialog 1" actionListener="#{dialogView.showDialog1}" />
-		
 		</h:form>
-		
+		<p:dialog closable="false">added just for loading css</p:dialog>
 	</h:body>
 	
 </html>
