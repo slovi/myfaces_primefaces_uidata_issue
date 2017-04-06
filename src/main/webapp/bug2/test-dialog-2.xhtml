@@ -14,9 +14,21 @@
 		
 		<h:form>
 			
-			<p:commandLink value="Close dialog 2" actionListener="#{dialogBean.closeDialog2}" />
+			<p:commandLink value="Close dialog 2" actionListener="#{dialogBean.closeDialog2}" />					
 		
 		</h:form>
+		
+		<p:ajaxStatus>
+			<f:facet name="start">
+				<p:dialog modal="false" draggable="false" closable="false" 
+					resizable="false" visible="true" position="center" showHeader="false" 
+					styleClass="pvng-dialog-backgroud-transparent" dynamic="false" showEffect="fade">
+					<p:graphicImage value="#{resource['images:loading/ajaxloading.gif']}" />
+				</p:dialog>
+			</f:facet>
+			<f:facet name="complete">
+			</f:facet>
+		</p:ajaxStatus>
 	
 	</h:body>
 </html>
