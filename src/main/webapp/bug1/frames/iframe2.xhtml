@@ -7,7 +7,7 @@
 	<h:outputText value="${frame2View.message}" />
 	
 	<h:dataTable var="car" value="#{dataGridView.cars}"
-        rows="12" paginator="true" id="cars" rowStatePreserved="true"
+        rows="12" paginator="true" id="cars" rowStatePreserved="false"
         paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
         rowsPerPageTemplate="6,12,16">
         

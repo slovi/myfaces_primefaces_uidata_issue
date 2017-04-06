@@ -1,4 +1,4 @@
-package cz.primefacesbugs.bug1654;
+package cz.primefacesbugs.bug1;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -9,20 +9,22 @@ import java.util.Set;
 
 import javax.annotation.PostConstruct;
 import javax.faces.context.FacesContext;
+import javax.faces.bean.ManagedBean;
 import javax.faces.view.ViewScoped;
-import javax.inject.Named;
 
-@Named("mainFrameBean")
+@ManagedBean
 @ViewScoped
-public class MainFrameBean implements Serializable {
+public class MainFrameView implements Serializable {
 
 	private static final long serialVersionUID = -8825266433508522729L;
 	
 	private String menuValue = "iframe1.xhtml";
+	
 	private Set<String> excludeViewBeans = new HashSet<String>();
 	
 	@PostConstruct
 	public void init() {
+		System.out.println("init: " + this);
 		excludeViewBeans.add("mainFrameBean");
 	}
 	
@@ -41,20 +43,14 @@ public class MainFrameBean implements Serializable {
 		}
 	}
 
-	public String setMenu(String menuValue) {
-		return null;
-	}
-
 	public String getMenuValue() {
+		System.out.println("getting value: " + menuValue);
 		return menuValue;
 	}
 
 	public void setMenuValue(String menuValue) {
-		System.out.println("Before: " + this.menuValue + ", now: " + menuValue + " " + this);
-		this.menuValue = menuValue;
-		System.out.println("Before beans: " + getViewMap());
+		System.out.println("setting value: " + menuValue);
 		deleteViewBeans();
-		System.out.println("After beans: " + getViewMap());
 		this.menuValue = menuValue;
 	}
 	

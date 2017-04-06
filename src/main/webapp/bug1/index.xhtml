@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+	<h:head>
+	
+	</h:head>
+	
+	<h:body>
+	
+		<p>
+			<h:outputLink value="#{request.contextPath}/index.xhtml">Back</h:outputLink>
+		</p>
+		
+		<h:form>
+			<h:panelGrid columns="1" bodyrows="3">
+				<p:commandLink update=":mainframe" process="@this" >
+					<h:outputText value="Frame 1" />
+					<f:setPropertyActionListener value="iframe1.xhtml" target="#{mainFrameView.menuValue}" />
+				</p:commandLink>
+				<p:commandLink update=":mainframe" process="@this" >
+					<h:outputText value="Frame 2" />
+					<f:setPropertyActionListener value="iframe2.xhtml" target="#{mainFrameView.menuValue}" />
+				</p:commandLink>
+				<p:commandLink update=":mainframe" process="@this" >
+					<h:outputText value="Frame 3" />
+					<f:setPropertyActionListener value="iframe3.xhtml" target="#{mainFrameView.menuValue}" />
+				</p:commandLink>
+				<p:commandLink update=":mainframe" process="@this" >
+					<h:outputText value="Frame 4" />
+					<f:setPropertyActionListener value="iframe4.xhtml" target="#{mainFrameView.menuValue}" />
+				</p:commandLink>
+			</h:panelGrid>
+		</h:form>
+		
+		<p:outputPanel id="mainframe">
+			<ui:include src="/bug1/frames/#{mainFrameView.menuValue}" />
+		</p:outputPanel>
+		
+	</h:body>
+	
+</html>

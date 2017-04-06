@@ -1,4 +1,4 @@
-package cz.primefacesbugs.bug1654.domain;
+package cz.primefacesbugs.bug1.domain;
 
 public class Car {
 	

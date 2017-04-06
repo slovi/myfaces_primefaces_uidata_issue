@@ -1,21 +1,22 @@
-package cz.primefacesbugs.bug1654;
+package cz.primefacesbugs.bug1;
 
 import java.io.Serializable;
 
 import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
 import javax.faces.view.ViewScoped;
-import javax.inject.Named;
 
-@Named
+@ManagedBean
 @ViewScoped
-public class Frame1View implements Serializable {
+public class Frame4View implements Serializable {
 	
-	private String message = "frame 1";
-	private String test = "test";
+	private static final long serialVersionUID = 8487326783056128332L;
+	
+	private String message = "frame 4";
 	
 	@PostConstruct
 	public void init() {
-		System.out.println("Frame 1 init");
+		System.out.println("Frame 4 init");
 	}
 
 	public String getMessage() {

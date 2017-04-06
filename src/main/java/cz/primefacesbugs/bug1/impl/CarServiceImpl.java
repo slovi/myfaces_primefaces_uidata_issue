@@ -1,4 +1,4 @@
-package cz.primefacesbugs.bug1654.impl;
+package cz.primefacesbugs.bug1.impl;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -6,15 +6,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
-import javax.enterprise.inject.Model;
+import cz.primefacesbugs.bug1.domain.Car;
+import cz.primefacesbugs.bug1.service.CarService;
 
-import cz.primefacesbugs.bug1654.domain.Car;
-import cz.primefacesbugs.bug1654.service.CarService;
-
-@Model
 public class CarServiceImpl implements CarService, Serializable {
 
-    private final static String[] colors;
+	private static final long serialVersionUID = -6814806162855384983L;
+
+	private final static String[] colors;
      
     private final static String[] brands;
      

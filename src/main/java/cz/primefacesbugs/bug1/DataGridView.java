@@ -1,25 +1,27 @@
-package cz.primefacesbugs.bug1654;
+package cz.primefacesbugs.bug1;
 
 import java.io.Serializable;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
 import javax.faces.view.ViewScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
 
-import cz.primefacesbugs.bug1654.domain.Car;
-import cz.primefacesbugs.bug1654.service.CarService;
+import cz.primefacesbugs.bug1.domain.Car;
+import cz.primefacesbugs.bug1.impl.CarServiceImpl;
+import cz.primefacesbugs.bug1.service.CarService;
 
-@Named
+@ManagedBean
 @ViewScoped
 public class DataGridView implements Serializable {
 	
+	private static final long serialVersionUID = 3263581768248952299L;
+
 	private List<Car> cars;
     
     private Car selectedCar;
      
-    private CarService service;
+    private CarService service = new CarServiceImpl();
      
     @PostConstruct
     public void init() {
@@ -30,7 +32,6 @@ public class DataGridView implements Serializable {
         return cars;
     }
  
-    @Inject
     public void setService(CarService service) {
         this.service = service;
     }
