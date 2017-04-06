@@ -1,4 +1,4 @@
-package cz.primefacesbugs.bug1;
+package cz.primefacesbugs.bug1654;
 
 import java.io.Serializable;
 import java.util.List;
@@ -8,8 +8,8 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import cz.primefacesbugs.bug1.domain.Car;
-import cz.primefacesbugs.bug1.service.CarService;
+import cz.primefacesbugs.bug1654.domain.Car;
+import cz.primefacesbugs.bug1654.service.CarService;
 
 @Named
 @ViewScoped

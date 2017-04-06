@@ -1,4 +1,4 @@
-package cz.primefacesbugs.bug1.impl;
+package cz.primefacesbugs.bug1654.impl;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -8,8 +8,8 @@ import java.util.UUID;
 
 import javax.enterprise.inject.Model;
 
-import cz.primefacesbugs.bug1.domain.Car;
-import cz.primefacesbugs.bug1.service.CarService;
+import cz.primefacesbugs.bug1654.domain.Car;
+import cz.primefacesbugs.bug1654.service.CarService;
 
 @Model
 public class CarServiceImpl implements CarService, Serializable {

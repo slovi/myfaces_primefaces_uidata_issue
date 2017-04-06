@@ -1,4 +1,4 @@
-package cz.primefacesbugs.bug1;
+package cz.primefacesbugs.bug1654;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -16,6 +16,8 @@ import javax.inject.Named;
 @ViewScoped
 public class MainFrameBean implements Serializable {
 
+	private static final long serialVersionUID = -8825266433508522729L;
+	
 	private String menuValue = "iframe1.xhtml";
 	private Set<String> excludeViewBeans = new HashSet<String>();
 	

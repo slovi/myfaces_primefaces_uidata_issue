@@ -1,4 +1,4 @@
-package cz.primefacesbugs.bug1;
+package cz.primefacesbugs.bug1654;
 
 import java.io.Serializable;
 
@@ -8,13 +8,13 @@ import javax.inject.Named;
 
 @Named
 @ViewScoped
-public class Frame2View implements Serializable {
+public class Frame4View implements Serializable {
 	
-	private String message = "frame 2";
+	private String message = "frame 4";
 	
 	@PostConstruct
 	public void init() {
-		System.out.println("Frame 2 init");
+		System.out.println("Frame 4 init");
 	}
 
 	public String getMessage() {
