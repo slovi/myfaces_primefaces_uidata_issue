@@ -4,7 +4,7 @@
 	<groupId>cz.jsf.test</groupId>
 	<artifactId>primefaces-bugs</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>pom</packaging>
 	<name>primefaces-bugs</name>
 	<description>primefaces-bugs</description>
 
@@ -26,44 +26,27 @@
   		</repository>
   	</repositories>
 	
-	<dependencies>
-		<dependency>
-			<groupId>org.glassfish</groupId>
-			<artifactId>javax.faces</artifactId>
-			<version>2.2.10</version>
-		</dependency>
-		<!-- dependency>
-			<groupId>org.apache.myfaces.core</groupId>
-			<artifactId>myfaces-api</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.myfaces.core</groupId>
-			<artifactId>myfaces-impl</artifactId>
-			<version>2.2.12</version>
-		</dependency-->
-		<dependency>
-			<groupId>org.primefaces</groupId>
-			<artifactId>primefaces</artifactId>
-			<version>6.0.RC2</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.enterprise</groupId>
-			<artifactId>cdi-api</artifactId>
-			<version>1.2</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>javax.el-api</artifactId>
-					<groupId>javax.el</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
-			<scope>provided</scope>
-		</dependency>
-	</dependencies>
+	<modules>
+		<module>primefaces-bugs-web</module>
+		<module>primefaces-bugs-ear</module>
+		<module>primefaces-bugs-service</module>
+	</modules>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>cz.jsf.test</groupId>
+				<artifactId>primefaces-bugs-web</artifactId>
+				<version>${project.version}</version>
+				<type>war</type>
+			</dependency>
+			<dependency>
+				<groupId>cz.jsf.test</groupId>
+				<artifactId>primefaces-bugs-ear</artifactId>
+				<version>${project.version}</version>
+				<type>ear</type>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 </project>

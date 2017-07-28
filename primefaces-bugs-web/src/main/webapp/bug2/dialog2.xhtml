@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+	<h:head>
+	
+	</h:head>
+	
+	<h:body>
+
+		<h:outputText value="Test dialog 2" />
+		
+		<h:form>
+			<p:commandLink value="Close dialog 2" actionListener="#{dialogView.closeCurrentDialog}" />					
+		</h:form>
+		
+		<p:ajaxStatus>
+			<f:facet name="start">
+				<p:dialog modal="false" draggable="false" closable="false" 
+					resizable="false" visible="true" position="center" showHeader="false" 
+					styleClass="pvng-dialog-backgroud-transparent" dynamic="false" showEffect="fade">
+					<p:graphicImage value="#{resource['images:loading/ajaxloading.gif']}" />
+				</p:dialog>
+			</f:facet>
+			<f:facet name="complete">
+			</f:facet>
+		</p:ajaxStatus>
+	
+	</h:body>
+</html>

@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+	<h:head>
+	
+	</h:head>
+	
+	<h:body>
+
+		<h:outputText value="Test dialog 1" />
+		
+		<h:form>
+			<h:panelGrid columns="1">
+				<p:commandLink value="Close dialog 1" actionListener="#{dialogView.closeCurrentDialog}" />		
+				<p:commandLink value="Show dialog 2" actionListener="#{dialogView.showDialog2}" />
+			</h:panelGrid>
+		</h:form>
+	
+	</h:body>
+</html>
